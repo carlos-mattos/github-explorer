@@ -16,7 +16,7 @@ interface Repository {
     login: string;
     avatar_url: string;
   };
-  stargazers_cout: number;
+  stargazers_count: number;
   forks_count: number;
   open_issues_count: number;
 }
@@ -66,7 +66,7 @@ const Repository: React.FC = () => {
         </header>
         <ul>
           <li>
-            <strong>{repository?.stargazers_cout}</strong>
+            <strong>{repository?.stargazers_count}</strong>
             <span>Stars</span>
           </li>
           <li>
