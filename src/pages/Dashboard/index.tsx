@@ -1,9 +1,9 @@
-import React, { useState, useEffect, FormEvent } from 'react';
-import { Title, Form, Repository, Error } from './styles';
-import logoImg from '../../assets/logo.svg';
-import { FiChevronRight } from 'react-icons/fi';
-import api from '../../services/api';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, FormEvent } from "react";
+import { Title, Form, Repository, Error } from "./styles";
+import logoImg from "../../assets/logo.svg";
+import { FiChevronRight } from "react-icons/fi";
+import api from "../../services/api";
+import { Link } from "react-router-dom";
 
 interface Repository {
   full_name: string;
@@ -15,19 +15,19 @@ interface Repository {
 }
 
 const Dashboard: React.FC = () => {
-  const [newRepo, setNewRepo] = useState('');
+  const [newRepo, setNewRepo] = useState("");
   const [repositories, setRepositories] = useState<Repository[]>(() => {
     const storageRepositories = localStorage.getItem(
-      '@GithubExplorer::repositories'
+      "@GithubExplorer::repositories"
     );
     if (storageRepositories) return JSON.parse(storageRepositories);
     else return [];
   });
-  const [inputError, setInputError] = useState('');
+  const [inputError, setInputError] = useState("");
 
   useEffect(() => {
     localStorage.setItem(
-      '@GithubExplorer::repositories',
+      "@GithubExplorer::repositories",
       JSON.stringify(repositories)
     );
   }, [repositories]);
@@ -46,25 +46,25 @@ const Dashboard: React.FC = () => {
       const response = await api.get<Repository>(`repos/${newRepo}`);
       const repository = response.data;
       setRepositories([...repositories, repository]);
-      setNewRepo('');
-      setInputError('');
+      setNewRepo("");
+      setInputError("");
     } catch (error) {
-      setInputError('Error searching for repo');
+      setInputError("Error searching for repo");
     }
   }
 
   return (
     <>
       <img src={logoImg} alt="logo" />
-      <Title>Explore repositories on Github</Title>
+      <Title>Explore repositórios no Github</Title>
       <Form hasError={!!inputError} onSubmit={handleAddRepository}>
         <input
-          placeholder="type here"
+          placeholder="Type username/repository-name, e.g.: facebook/react"
           type="text"
           value={newRepo}
           onChange={(e) => setNewRepo(e.target.value)}
         />
-        <button type="submit">Search</button>
+        <button type="submit">Buscar</button>
       </Form>
       {inputError && <Error>{inputError}</Error>}
       <Repository>
