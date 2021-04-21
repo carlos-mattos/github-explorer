@@ -4,6 +4,8 @@
      <a/>
 </p>
 
+</br>
+
 ## 🚀 Tecnologias utilizadas
 
 -  [ReactJS](https://reactjs.org/)
@@ -11,6 +13,8 @@
 -  [Axios](https://github.com/axios/axios)
 -  [Polished](https://polished.js.org/)
 -  [styled-components](https://www.styled-components.com/)
+
+</br>
 
 ## 🗂 Como baixar e iniciar o projeto
 
@@ -28,6 +32,8 @@ $ npm install
 # Inicie o React
 $ npm start
 ```
+</br>
+
 ## 📝 Licença
 
 Este projeto esta sobe a licença MIT. Veja a [LICENÇA](https://opensource.org/licenses/MIT) para saber mais.
