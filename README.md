@@ -10,7 +10,7 @@
 <b>Github-Explorer</b> é uma aplicação desenvolvida, a fim de, extrair informações primárias de qualquer repositório. As buscas ficam salvas no localStorage do seu navegador, assim, você poderá revisitá-las rapidamente sempre que desejar!
 
 ## 👀 Demo
-<h4>Deploy on Vercel: https://github-explorer-ceam.herokuapp.com/</h4>
+<h4>Deploy on Heroku: <a href="https://github-explorer-ceam.herokuapp.com" target="_blank" /></h4>
 
 ## 🚀 Tecnologias utilizadas
 
