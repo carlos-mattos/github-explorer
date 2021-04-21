@@ -16,7 +16,7 @@
 
 ```bash
 # Abra um terminal e copie este repositório com o comando
-$ git clone https://github.com/carlos-mattos/moveit.git
+$ git clone https://github.com/carlos-mattos/github-explorer.git
 # ou use a opção de download.
 
 # Entre na pasta github-explorer
@@ -28,3 +28,8 @@ $ npm install
 # Inicie o React
 $ npm start
 ```
+## 📝 Licença
+
+Este projeto esta sobe a licença MIT. Veja a [LICENÇA](https://opensource.org/licenses/MIT) para saber mais.
+
+Desenvolvido por [Carlos Eduardo](https://www.linkedin.com/in/carlos-eduardo-andrade-de-mattos-a060b1182/) 🤓
