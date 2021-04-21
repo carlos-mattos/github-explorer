@@ -56,7 +56,7 @@ const Dashboard: React.FC = () => {
   return (
     <>
       <img src={logoImg} alt="logo" />
-      <Title>Explore repositórios no Github</Title>
+      <Title>Explore repositories on Github</Title>
       <Form hasError={!!inputError} onSubmit={handleAddRepository}>
         <input
           placeholder="Type username/repository-name, e.g.: facebook/react"
